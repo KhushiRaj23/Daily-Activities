@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="week2ValidationTask.css">
+</head>
+<body>
+    <ul class="intro">
+        <li> Khushi Raj </li>
+        <li> 12221391 </li>
+        <li> Week 2 Assignment </li>
+    </ul>
+    <fieldset>
+        <div class="formClass"></div>
+    <legend>User Information</legend>
+    <form id="myform" action="#" autocomplete="off" onsubmit="return check()">
+        <table style="width:100%" cellpadding="10" cellspacing="10" align="center">
+        <tr><td><input type="text" id="name" placeholder="Enter Your name"> <span id="name1" style="visibility: hidden;">It should not be null !</span><span id="name2" style="visibility: hidden;">It should be text!</span></td>
+        </tr>
+        <tr><td><input type="password" id="password" placeholder="Enter Your password"><span id="pass1" style="visibility: hidden;">It should not be null!</span><span id="pass2" style="visibility: hidden;">more than 5 character!</span><span id="pass3" style="visibility: hidden;">include special character!</span></td></tr>
+        <tr><td><input type="password" id="conpass" placeholder="Enter Your Confirm password"> <span id="conpass1"></span></td></tr>
+        <tr><td><input type="tel" id="mobile" placeholder="Enter Your mobile"> <span id="mobile1"></span></td></tr>
+        <tr><td><input type="email" id="email" placeholder="Enter Your Email"> <span id="email1" style="visibility: hidden;">It should not be null!</span></td></tr>
+        <tr><td><input type="submit" id="button" placeholder="Submit"> <span id="button1"></span></td></tr>
+        </table>
+    </form>
+</div>
+</fieldset>
+<script>
+    function check(){
+        var username=document.getElementById("name");
+        var password=document.getElementById("password");
+        var email=document.getElementById("email");
+
+        if(username.value.trim()==""){
+            username.style.border="solid 2px red";
+            document.getElementById("name1").style.visibility="visible";
+            return false;
+        }else if(!(isNaN(username.value.trim()))){
+            username.style.border="solid 2px red";
+            document.getElementById("name2").style.visibility="visible";
+            return false;
+        }
+        else if(password.value.trim()==""){
+            password.style.border="solid 2px red";
+            document.getElementById("pass1").style.visibility="visible";
+            return false;
+        }
+        else if(password.value.trim().length<5){
+            password.style.border="solid 2px red";
+            document.getElementById("pass2").style.visibility="visible";
+            return false;
+        }else if(!/[&@*$%]/.test(password.value.trim())){
+            password.style.border="solid 2px red";
+            document.getElementById("pass3").style.visibility="visible";
+            return false;
+        }else if(email.value.trim()==""){
+            document.getElementById("email1").style.visibility="visible";
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

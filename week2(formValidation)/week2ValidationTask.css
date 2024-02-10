@@ -1,0 +1,30 @@
+*{
+    background-color: rgba(250, 240, 182, 0.616);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.formClass{
+    background:transparent;
+    backdrop-filter: blur(4px);
+}
+.intro{
+    background-color: rgb(111, 70, 4);
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+li{
+    background-color: white;
+    display: flex;
+    color: rgb(146, 93, 25);
+}
+table tr td{
+    border-radius: 2px;
+    border:0.5px solid rgb(132, 20, 20);
+    align-items: center;
+    }
+legend{
+    font-size: x-large;
+}
