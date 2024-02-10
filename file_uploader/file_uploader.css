@@ -1,0 +1,33 @@
+
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+html{
+    height: 100%;
+}
+body{
+
+    background: linear-gradient(to bottom, #eddc7be2,#ac0f0fbb);
+    background-repeat: no-repeat;
+}
+.mainDiv{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    
+    
+}
+.error{
+    color: red;
+}
+#errorSpan{
+    color: red;
+    margin-left: 20px;
+}
+#uploadButton{
+    display: block;
+    border-radius: 10px;
+    
+}
