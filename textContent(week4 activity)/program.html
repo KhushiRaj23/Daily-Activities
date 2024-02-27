@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Square Div with Elements</title>
+<style>
+    #squareDiv {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(230, 55, 239);
+        border: 2px solid black;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="squareDiv"></div>
+
+<script>
+    const squareDiv = document.getElementById('squareDiv');
+
+    
+    const h1 = document.createElement('h1');
+    h1.textContent = 'KHUSHI RAJ';
+    squareDiv.appendChild(h1);
+
+    
+    const h2 = document.createElement('h2');
+    h2.textContent = 'KHUSHI RAJ';
+    squareDiv.appendChild(h2);
+
+    
+    const h3 = document.createElement('h3');
+    h3.textContent = 'KHUSHI RAJ';
+    squareDiv.appendChild(h3);
+
+   
+    const h4 = document.createElement('h4');
+    h4.textContent = 'KHUSHI RAJ';
+    squareDiv.appendChild(h4);
+
+
+    
+    const paragraph = document.createElement('p');
+    paragraph.textContent = 'This is my week four Activity.';
+    squareDiv.appendChild(paragraph);
+</script>
+
+</body>
+</html>

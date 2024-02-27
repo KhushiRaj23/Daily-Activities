@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="p1">
+    <img src="aryabhatta.jpg" alt="" id="i1">
+    </span>
+    <span id="p2"></span>
+    <br>
+    <button id="btn1">Table/Factorial</button>
+    <script>
+        var a=document.getElementById('p1');
+        var b=document.getElementById('btn1');
+        var c=document.getElementById('p2');
+        bool=0;
+        fact=1;
+        b.addEventListener('click',function(){
+            if(bool==0){
+                a.style.visibility='hidden';
+                c.style.visibility='visible';
+                let tableContent = '';
+                for(let i=1;i<=10;i++){
+                    tableContent += `${2*i} `;
+                    c.textContent = tableContent;
+                }
+                // c.textContent = tableContent;
+                bool++;
+            }
+            else if(bool==1){
+                c.innerHTML=''
+                for(let i=1;i<=4;i++){
+                    fact*=i;
+                }
+                c.innerHTML=fact;
+                bool++;
+            }
+        })
+    </script>
+</body>
+</html>

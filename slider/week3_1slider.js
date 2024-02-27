@@ -9,6 +9,7 @@ const top1 = () => {
   counter--;
   if(counter < 0){
     counter=0;
+    return;
   }
   sliderrun();
 };
