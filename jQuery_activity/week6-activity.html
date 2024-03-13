@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box1{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+   <div id="box1"></div> 
+   <button id="btn1">Animate</button><br>
+   <div style="height: 80px; width: 400px;">
+   <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil quod, tenetur dolores facere modi?</p><br>
+</div>
+   <button id="btn2">show</button>
+   <button id="btn3">hide</button><br>
+   <div style="height: 80px; width: 400px;">
+   <h2 id="h1">Khushi Raj</h2>
+</div>
+   <button id="btn4" >FadeIn</button>
+   <button id="btn5" >FadeOut</button>
+   <button id="btn6" >FadeTo</button><br>
+   <div style="height: 80px; width: 400px;">
+    <h3 id="h2">Week 6 Activity</h3>
+ </div>
+ <button id="btn7">SlideDown</button>
+ <button id="btn8">SlideToggle</button><br>
+</body>
+<script>
+    $(document).ready(function(){
+        let bool=false;
+        $("#btn1").click(function(){
+            if(!bool){
+            $("#box1").animate({height:"400px",width:"400px"});}
+            else{
+            $("#box1").animate({height:"200px",width:"200px"
+        });}
+        bool=!bool;
+            
+        });
+
+        $("#btn2").click(function(){
+            $("#p1").show();
+        })
+
+        $("#btn3").click(function(){
+            $("#p1").hide();
+        })
+
+        $("#btn4").click(function(){
+            $("#h1").fadeIn();
+        })
+
+        $("#btn5").click(function(){
+            $("#h1").fadeOut();
+        })
+        $("#btn6").click(function(){
+            if(!bool){
+            $("#h1").fadeTo(1000,0.2);
+            }else{
+                $("#h1").fadeTo(1000,1);
+            }
+            bool=!bool;
+        })
+        
+        $("#btn7").click(function(){
+            $("#h2").slideDown();
+        })
+
+        $("#btn8").click(function(){
+            $("#h2").slideToggle();
+        })
+        
+    })
+</script>
+</html>
